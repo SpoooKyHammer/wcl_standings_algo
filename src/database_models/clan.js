@@ -8,7 +8,12 @@ class Clan{
      * @param {Object} clanRecordsObject Object of clan record/result data
      */
     constructor(clanRecordObject){
+        /**
+         * @private
+         * @property {Object} clanRecordObject
+         */
         this.clanRecordObject = clanRecordObject;
+
         this.abb = this.clanRecordObject.abb;
         this.clanTag = this.clanRecordObject.clanTag;
         this.conference = this.clanRecordObject.conference;
@@ -43,6 +48,7 @@ class Clan{
             }
             // console.log(opponent);
         }
+        this.averageSD = (this.starsFor - this.starsAgainst)/this.matchesPlayed
     }
 }
 
