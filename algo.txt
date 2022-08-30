@@ -1,0 +1,14 @@
+--Standings--
+
+Sorting Criteria: 
+    - Overall Record: Wins > Ties > Loses
+
+    - Average Star Differential (sum of star diff divide by number of matches played)
+
+    - Average Destruction Percentage (sum of destruction percent divide by number of matches played)
+
+    - Division aka Group/Conference Record
+
+
+
+Step 1: 
