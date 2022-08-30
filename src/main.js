@@ -20,8 +20,9 @@ for(let clanRecord of records){
     standings.push(clan)
 }
 
+//sort by descending order
 sortedByWins = standings.sort((a,b) => {
-    return a.wins - b.wins;
+    return b.wins - a.wins;
 })
 console.log(standings)
 console.log("_------------------")
