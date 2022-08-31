@@ -1,5 +1,5 @@
 /**
- *  A class to represent a clan's records aka result data.
+ *  A class to represent a clan's records.
  */
 class Clan{
 
@@ -8,15 +8,9 @@ class Clan{
      * @param {Object} clanRecordsObject Object of clan record/result data
      */
     constructor(clanRecordObject){
-        /**
-         * @private
-         * @property {Object} clanRecordObject
-         */
-        this.clanRecordObject = clanRecordObject;
-
-        this.abb = this.clanRecordObject.abb;
-        this.clanTag = this.clanRecordObject.clanTag;
-        this.conference = this.clanRecordObject.conference;
+        this.abb = clanRecordObject.abb;
+        this.clanTag = clanRecordObject.clanTag;
+        this.conference = clanRecordObject.conference;
         this.wins = 0;
         this.loses = 0;
         this.ties = 0;
@@ -24,7 +18,7 @@ class Clan{
         this.matchesPlayed = 0;
         this.starsFor = 0;
         this.starsAgainst = 0;
-        this.setStats(this.clanRecordObject.opponent);
+        this.setStats(clanRecordObject.opponent);
     }
 
     /**
@@ -44,18 +38,13 @@ class Clan{
                 this.matchesPlayed++;
                 this.starsFor += opponent.starFor;
                 this.starsAgainst += opponent.starAgainst;
-                this.perDest += opponent.perDest
+                this.perDest += opponent.perDest;
             }
             // console.log(opponent);
         }
-        this.averageSD = (this.starsFor - this.starsAgainst)/this.matchesPlayed
+        this.averageSD = (this.starsFor - this.starsAgainst)/this.matchesPlayed;
+        this.averagePerDest = this.perDest/this.matchesPlayed;
     }
 }
 
 module.exports.Clan = Clan;
-
-// const r = require("../resources").RECORDS
-
-// const obj = new Clan(r[0])
-// console.log(obj.wins)
-// console.log(r[0])
