@@ -22,7 +22,7 @@ class Clan{
     }
 
     /**
-     * Sets wins,loses,ties,matches, perDest, starsFor and Stars Against of the clan.
+     * Sets values of all properties.
      * @private
      * @param {Object} opponentObject Opponent Object
      */
